@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F4F8"
     tools:context=".LoginActivity">
 
     <!-- CardView para criar um efeito de elevação e agrupar os elementos do formulário -->
@@ -23,6 +22,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#F4F4F4"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -59,7 +59,8 @@
                     android:id="@+id/editTextUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="#575D68" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,7 +78,8 @@
                     android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="#575D68" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +92,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:visibility="gone"
-                tools:visibility="visible"/>
+                tools:visibility="visible" />
 
             <!-- Botão de Login -->
             <Button

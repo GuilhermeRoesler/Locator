@@ -1,29 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingTop="30dp">
+    android:background="#F5F5F5"
+    android:padding="24dp"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textLocationStatus"
+    <LinearLayout
+        android:id="@+id/top_content_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clique no botão para obter a localização"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonStart"
+        <ImageView
+            android:id="@+id/iconLocation"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Ícone de localização"
+            android:foregroundTint="#D50000"
+            android:src="@drawable/ic_location_pin"
+            app:tint="#465CD1" />
+
+        <!--
+          TEXTO DE STATUS: Informa o estado atual do rastreamento.
+        -->
+        <TextView
+            android:id="@+id/textLocationStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rastreamento Inativo"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_buttons_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start" />
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
 
-    <Button
-        android:id="@+id/buttonStop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stop" />
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:padding="15dp"
+            android:text="Start" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E91E1E"
+            android:padding="15dp"
+            android:text="Stop" />
+    </LinearLayout>
+</RelativeLayout>
